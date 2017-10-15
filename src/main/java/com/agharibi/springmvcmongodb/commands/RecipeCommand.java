@@ -2,7 +2,9 @@ package com.agharibi.springmvcmongodb.commands;
 
 import com.agharibi.springmvcmongodb.domain.Difficulty;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class RecipeCommand {
@@ -15,11 +17,12 @@ public class RecipeCommand {
     private String source;
     private String url;
     private String direction;
-    private Set<IngredientCommand> ingredients = new HashSet<>();
+
+    private List<IngredientCommand> ingredients = new ArrayList<>();
     private Byte[] image;
     private Difficulty difficulty;
     private NotesCommand notes;
-    private Set<CategoryCommand> categories = new HashSet<>();
+    private List<CategoryCommand> categories = new ArrayList<>();
 
     public RecipeCommand() {
     }
@@ -88,11 +91,11 @@ public class RecipeCommand {
         this.direction = direction;
     }
 
-    public Set<IngredientCommand> getIngredients() {
+    public List<IngredientCommand> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Set<IngredientCommand> ingredients) {
+    public void setIngredients(List<IngredientCommand> ingredients) {
         this.ingredients = ingredients;
     }
 
@@ -112,11 +115,11 @@ public class RecipeCommand {
         this.notes = notes;
     }
 
-    public Set<CategoryCommand> getCategories() {
+    public List<CategoryCommand> getCategories() {
         return categories;
     }
 
-    public void setCategories(Set<CategoryCommand> categories) {
+    public void setCategories(List<CategoryCommand> categories) {
         this.categories = categories;
     }
 
